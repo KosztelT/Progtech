@@ -1,4 +1,4 @@
 package org.example;
 
-public class SDK {
+public class Main {
 }
