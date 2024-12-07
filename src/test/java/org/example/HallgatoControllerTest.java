@@ -1,8 +1,8 @@
-package com.neptun.neptun_web;
+package org.example;
 
-import com.neptun.neptun_web.controller.HallgatoController;
-import com.neptun.neptun_web.service.NeptunRendszer;
-import com.neptun.neptun_web.model.Hallgato;
+import org.example.controller.HallgatoController;
+import org.example.service.NeptunRendszer;
+import org.example.model.Hallgato;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
