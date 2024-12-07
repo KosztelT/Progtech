@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptun Rendszer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Neptun Rendszer</h1>
+
+<h2>Hallgatók</h2>
+<ul>
+    <li th:each="hallgato : ${hallgatok}">
+        <span th:text="${hallgato.nev}">Hallgató neve</span> -
+        <span th:text="${hallgato.neptunKod}">Neptun kód</span>
+    </li>
+</ul>
+
+<h2>Új hallgató hozzáadása</h2>
+<form action="/ujHallgato" method="POST">
+    <label for="ujNev">Név:</label>
+    <input type="text" id="ujNev" name="nev" required>
+    <label for="ujNeptunKod">Neptun kód:</label>
+    <input type="text" id="ujNeptunKod" name="neptunKod" required>
+    <button type="submit">Hozzáadás</button>
+</form>
+
+<h2>Hallgató keresése</h2>
+<form action="/keresHallgato" method="GET">
+    <label for="keresNeptunKod">Neptun kód:</label>
+    <input type="text" id="keresNeptunKod" name="neptunKod" required>
+    <button type="submit">Keresés</button>
+</form>
+</body>
+</html>
