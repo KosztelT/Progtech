@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hu" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptun Rendszer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Hallgató keresése</h1>
+
+<div th:if="${hallgato}">
+    <p th:text="'Név: ' + ${hallgato.nev}"></p>
+    <p th:text="'Neptun kód: ' + ${hallgato.neptunKod}"></p>
+</div>
+<div th:if="${hallgato == null}">
+    <p>A keresett hallgató nem található.</p>
+</div>
+
+<a href="/">Vissza a főoldalra</a>
+</body>
+</html>
