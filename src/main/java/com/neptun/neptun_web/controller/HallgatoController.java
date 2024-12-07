@@ -1,4 +1,4 @@
-package org.example.controller;
+package com.neptun.neptun_web.controller;
 
 import com.neptun.neptun_web.model.Hallgato;
 import com.neptun.neptun_web.service.NeptunRendszer;
